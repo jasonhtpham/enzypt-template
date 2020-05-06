@@ -66,6 +66,15 @@ subtitle {
     margin: 3mm 3mm 3mm 3mm;
     color: rgb(9, 245, 80);
   }
+
+  .grid-container {
+    display: grid;
+    grid: 150px 100px / 150px auto;
+  }
+
+  .grid-container > div {
+    text-align: left;
+  }
   
   /* Add rounded corners to the top left and the top right corner of the image */
   img {
@@ -100,16 +109,30 @@ subtitle {
 .flex-align-center {
 	display: flex;
 	align-items: center;
-    justify-content: center;
+  justify-content: center;
+}
+
+.buy-button {
+  background-color:  #333;
+  color: white;
+  font-weight: bold;
+  padding: 12px 28px;
+  float: right;
+  border: 2px solid #06fea1;
+}
+
+.buy-button:hover {
+  background-color: #06fea1;
+  color: black;
 }
 
 .profile-image.resize {
-    margin-top: 5mm;
-    margin-bottom: 5mm;
+  margin-top: 5mm;
+  margin-bottom: 5mm;
 }
 
 .image-preview {
-    filter: blur(6px);
+  filter: blur(6px);
 }
 
 /* non-small screen */
