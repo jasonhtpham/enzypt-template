@@ -10,7 +10,7 @@ function App() {
       <h1>Paywall</h1>
       <NavBar />
       <div className="section-header">
-        <h3><b>Selling files</b></h3>
+        <h2><b>Selling files</b></h2>
       </div>
       <FileCards />
     </React.Fragment>
