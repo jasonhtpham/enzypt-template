@@ -219,7 +219,38 @@ class PurchaseFile extends Component {
             this.setState({ paymentTxReceipt: receipt })
           })
           .on('error', e => this.setState({ errorMsg: 'Payment was rejected' }))
+    }
+
+    postPurchaseConfirmation = async () => {
+      if (!this.state.zipFileHash) {
+        try {
+          var result = await axios.post(API_URL + '/buy', {
+            txHash: this.state.paymentTxHash
+          })
+        } catch (e) {
+          alert(e)
+        }
+        this.unzipDecryptDownload(result.data)
+      } else {
+        this.unzipDecryptDownload(this.state.zipFileHash)
       }
+    }
+  
+    unzipDecryptDownload = async zipHash => {
+      const decrypted = await this.getAndDecryptFile(zipHash)
+      const { files } = this.state
+      const blob = new Blob([decrypted])
+      const link = document.createElement('a')
+      link.href = URL.createObjectURL(blob)
+      link.style = 'display: none;'
+      document.body.appendChild(link)
+      if (files.length === 1) {
+        link.download = files[0].name
+      } else {
+        link.download = this.state.name + '.zip'
+      }
+      link.click()
+    }
 
     render() {
         return (
@@ -235,7 +266,7 @@ class PurchaseFile extends Component {
                     :
                     <div>
                         <h3> This file is FREE </h3>
-                        <input type="button" value="Download" onClick={}/>
+                        <input type="button" value="Decrypt & Download" onClick={() => this.postPurchaseConfirmation()}/>
                     </div>
                 }
             </div>

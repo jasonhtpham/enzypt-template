@@ -10,7 +10,6 @@ class FileCards extends Component {
     //update fileName, fileprice and filepreview here
     //As soon as a complete object is added -> a new filecard will be created
     //Update Enzypt fileUrl to sell your files.
-    //fileCards.id increment by 1 for each added fileCard
     state = {
         fileCards: [
             {id:1, fileName:"fileName1", filePrice: 0.1, filePreview: file1Preview, 
