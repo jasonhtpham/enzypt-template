@@ -9,9 +9,6 @@ function App() {
       {/* Update your website name here */}
       <h1>Paywall</h1>
       <NavBar />
-      <div className="section-header">
-        <h2><b>Selling files</b></h2>
-      </div>
       <FileCards />
     </React.Fragment>
   );

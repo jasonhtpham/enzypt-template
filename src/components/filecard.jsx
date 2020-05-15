@@ -37,6 +37,3 @@ class FileCard extends Component {
 }
  
 export default FileCard;
-
-// https://enzypt.io/yQoUSuMNqL4S64NYI2D4tMgieRQwBgRC/JpkNdS8arNcBA7k3F_-yWnEUqw8YkOrMk1Z2Ka2XuXk FREE
-// https://enzypt.io/EYBizx1ZJZUO1H92ANiLa4PJRGcIiK4g/XvTQPT4lGqiy771u2vZiQe9-1T0TK2ZNTlbkFs0HRzY 0.01 ETH

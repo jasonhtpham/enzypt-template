@@ -135,6 +135,56 @@ subtitle {
   filter: blur(6px);
 }
 
+.purchase-file {
+  text-align: center;
+  font-size: large;
+  vertical-align: middle;
+}
+
+.yes-button {
+  color: white;
+  background-color:  #333;
+  border: 2px solid #06fea1;
+  width: 50px;
+  font-size: medium;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+}
+
+.yes-button:hover {
+  background-color: #06fea1;
+  color: black;
+}
+
+.no-button {
+  color: white;
+  background-color:  #333;
+  border: 2px solid #fe72cd;
+  width: 50px;
+  font-size: medium;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+}
+
+.no-button:hover {
+  background-color: #fe72cd;
+  color: black;
+}
+
+.download-button {
+  color: white;
+  background-color:  #333;
+  border: 2px solid #06fea1;
+  font-size: medium;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+}
+
+.download-button:hover {
+  background-color: #06fea1;
+  color: black;
+}
+
 /* non-small screen */
 @media screen and (min-width: 30em) {
   .responsive-container{

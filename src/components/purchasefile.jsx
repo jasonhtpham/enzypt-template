@@ -254,19 +254,26 @@ class PurchaseFile extends Component {
 
     render() {
         return (
-            <div>
+            <div className="purchase-file">
+              <h2> Purchasing </h2>
                 {this.props.filePrice !== 0
                     ?
                     <div>
-                        <form className="confirmPurchase">
-                            <h3>Do you wish to purchase this file for {this.props.filePrice} ETH? </h3>
-                            <input type="button" value="Yes" onClick={() => this.purchaseFile()}/>
+                      {this.state.errorMsg
+                        ? <h2 className="Error-message"> {this.state.errorMsg} </h2>
+                        : <form className="confirmPurchase"> 
+                        <h3>Do you wish to purchase this file for {this.props.filePrice} ETH? </h3>
+                        <input className="yes-button" type="button" value="Yes" onClick={() => this.purchaseFile()}/>
+                        <input className="no-button" type="button" value="No" onClick={() => window.location.reload()}/>
                         </form>
+                      }
                     </div>
                     :
                     <div>
-                        <h3> This file is FREE </h3>
-                        <input type="button" value="Decrypt & Download" onClick={() => this.postPurchaseConfirmation()}/>
+                      <h3> This file is FREE </h3>
+                      <input className="download-button" type="button" value="Decrypt & Download" onClick={() => this.postPurchaseConfirmation()}/>
+                      <br />
+                      <input className="no-button" type="button" value="Back" onClick={() => window.location.reload()}/>
                     </div>
                 }
             </div>

@@ -37,9 +37,11 @@ class FileCards extends Component {
           <React.Fragment>
             <div>
               {buyClicked
-                ? <PurchaseFile fileUrl={this.state.fileUrl} dKey={this.state.dKey} filePrice={this.state.filePrice} />
+                ? <PurchaseFile fileUrl={this.state.fileUrl} dKey={this.state.dKey} 
+                    filePrice={this.state.filePrice} />
                 : 
                 <div>
+                  <h2><b>Selling files</b></h2>
                   {this.state.fileCards.map(fileCard => (
                       <FileCard
                         key={fileCard.id}
